@@ -11,13 +11,13 @@
     <div class="container">
 
 
-        <div class="row mt-3 main-row">
+        <div class="row main-row">
             <div class="col-12 d-flex justify-content-center">
                 <h1 class="main-title">Coffee!</h1>
             </div>
         </div>
 
-        <hr>
+        <hr id="hr-main">
 
         <div class="row mt-5">
 
@@ -29,33 +29,42 @@
 
             <div class="col-6">
                 <form class="mb-5">
-                    <h2>Roast</h2>
+                    <h2 id="add-coffee-head"><u>Search Coffee</u></h2>
+
+                    <!--<h2>Roast</h2>-->
                     <div class="form-group">
-                    <label for="roast-selection"></label>
+                    <label for="roast-selection">Roast</label>
                     <select class="input-group mb-3" id="roast-selection">
                         <option value="all">All</option>
                         <option value = "light">Light</option>
                         <option value = "medium">Medium</option>
                         <option value = "dark">Dark</option>
                     </select>
+                        <label>Coffee Name</label>
                     <input type="text" class="input-group mb-3" id="coffee-search">
                     <input id="submit" class="btn btn-primary btn-md btn-block" type="submit">
                     </div>
                 </form>
+                <hr id="hr-main">
 
                 <form class="mt-5">
-                <h2>Add Coffee</h2>
-                    <label for="roast-add"></label>
+
+                <h2 id="add-coffee-head"><u>Add Coffee</u></h2>
+
+                    <label for="roast-add">Roast</label>
                     <select class="input-group mb-3" id="roast-add">
                         <option value = "light">Light</option>
                         <option value = "medium">Medium</option>
                         <option value = "dark">Dark</option>
                     </select>
+                    <label>Coffee Name</label>
                     <input type="text" class="input-group mb-3"  id="name-add">
                     <input id="user-submit" class="btn btn-primary btn-md btn-block"  type="submit" />
                 </form>
+
             </div>
         </div>
+        <hr id="hr-main">
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
