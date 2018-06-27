@@ -13,6 +13,7 @@
                 <h1>Coffee!</h1>
             </div>
         </div>
+        <hr>
 
         <div class="row mt-5">
 
@@ -24,27 +25,30 @@
 
             <div class="col-6">
                 <form>
+                    <h2>Roast</h2>
+                    <div class="form-group">
                     <label for="roast-selection"></label>
-                    <select id="roast-selection">
+                    <select class="input-group mb-3" id="roast-selection">
                         <option value="all">All</option>
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
+                        <option value = "light">Light</option>
+                        <option value = "medium">Medium</option>
+                        <option value = "dark">Dark</option>
                     </select>
-                    <input type="text" id="coffee-search">
-                    <input id="submit" type="submit" />
+                    <input type="text" class="input-group mb-3" id="coffee-search">
+                    <input id="submit" class="btn btn-primary btn-md btn-block" type="submit">
+                    </div>
                 </form>
 
-                <h1> Add a Coffee</h1>
+                <h2>Add Coffee</h2>
                 <form>
                     <label for="roast-add"></label>
-                    <select id="roast-add">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
+                    <select class="input-group mb-3" id="roast-add">
+                        <option value = "light">Light</option>
+                        <option value = "medium">Medium</option>
+                        <option value = "dark">Dark</option>
                     </select>
-                    <input type="text" id="name-add">
-                    <input id="user-submit" type="submit" />
+                    <input type="text" class="input-group mb-3"  id="name-add">
+                    <input id="user-submit" class="btn btn-primary btn-md btn-block"  type="submit" />
                 </form>
             </div>
         </div>
@@ -56,3 +60,21 @@
     <script src="main.js"></script>
 </body>
 </html>
+
+
+<!--<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>-->
