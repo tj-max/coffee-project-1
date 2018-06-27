@@ -1,9 +1,14 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+.coffee-list li {
+    list-style: none;
+    display: inline-block;
+    width: 50%;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.coffee-card h3,
+.coffee-card p {
+    display: inline-block;
+}
+
+.coffee-card p {
+    color: #A9A4A4;
 }

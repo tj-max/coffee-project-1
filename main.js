@@ -1,8 +1,8 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<h3>' + coffee.name + '</h3>';
-    html += '<p>' + coffee.roast + '</p>';
+    var html = '<li class="my-2"><div class= "col coffee-card px-0 mx-0"><h3>' + coffee.name + '</h3>';
+    html += '<p class="pl-1">' + coffee.roast + '</p></div></li>';
 
     return html;
 }
@@ -50,18 +50,16 @@ function updateCoffees(e) {
     divCoffee.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function addNewCoffee(e){
+function addCoffee(e) {
     e.preventDefault();
     var newCoffee = {
-        id: coffees.length+1,
+        id: coffees.length + 1,
         name: nameAdd.value,
         roast: roastAdd.value
     }
+
     coffees.push(newCoffee);
-    console.log(coffees);
     divCoffee.innerHTML = renderCoffees(coffees);
-
-
 }
 
 
@@ -89,8 +87,8 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#coffee-search');
 
-var nameAdd = document.querySelector('#name-add');
 var roastAdd = document.querySelector('#roast-add');
+var nameAdd = document.querySelector('#name-add');
 var userSubmit = document.querySelector('#user-submit');
 
 divCoffee.innerHTML = renderCoffees(coffees);
@@ -98,4 +96,5 @@ divCoffee.innerHTML = renderCoffees(coffees);
 console.log(submitButton.addEventListener('click', updateCoffees));
 roastSelection.addEventListener('change', updateCoffees);
 coffeeSearch.addEventListener('input', updateCoffees);
-userSubmit.addEventListener('click', addNewCoffee);
+
+userSubmit.addEventListener('click', addCoffee);
