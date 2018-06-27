@@ -63,3 +63,8 @@ border: 0;
 .card-footer {
     font-weight: 700;
 }
+
+.construction-img {
+    background-image: url("img/Under_construction_image.jpg");
+    background-size: cover;
+}

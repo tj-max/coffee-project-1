@@ -1,122 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cofvev Project | TJ-MAXX</title>
-    <link href="https://fonts.googleapis.com/css?family=Carter+One|Encode+Sans+Condensed|Galada|Lobster|Rock+Salt|Sigmar+One|Titan+One" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
+    <head>
+        <meta charset="UTF-8">
+        <title>Covfefe Project | TJ-MAXX</title>
+        <link href="https://fonts.googleapis.com/css?family=Carter+One|Encode+Sans+Condensed|Galada|Lobster|Rock+Salt|Sigmar+One|Titan+One" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
 
 
-        <div class="row main-row">
-            <div class="col-12 d-flex justify-content-center">
-                <h1 class="main-title">Coffee!</h1>
-            </div>
-        </div>
-
-        <hr id="hr-main">
-
-        <div class="row mt-5">
-
-            <div class="col-6">
-                <div class="coffee-list row">
-                    <ul class="pl-0 mr-0" id="coffees"></ul>
+            <div class="row main-row">
+                <div class="col-12 d-flex justify-content-center">
+                    <h1 class="main-title">Coffee!</h1>
                 </div>
             </div>
 
-            <div class="col-6">
-                <form class="mb-5">
-                    <h2 id="add-coffee-head"><u>Search Coffee</u></h2>
+            <hr id="hr-main">
 
-                    <!--<h2>Roast</h2>-->
-                    <div class="form-group">
-                    <label for="roast-selection" class="labels">Roast</label>
-                    <select class="input-group mb-3" id="roast-selection">
-                        <option value="all">All</option>
-                        <option value = "light">Light</option>
-                        <option value = "medium">Medium</option>
-                        <option value = "dark">Dark</option>
-                    </select>
+            <div class="row mt-5">
+
+                <div class="col-6">
+                    <div class="coffee-list row">
+                        <ul class="pl-0 mr-0" id="coffees"></ul>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <form class="mb-5">
+                        <h2 id="add-coffee-head"><u>Search Coffee</u></h2>
+
+                        <!--<h2>Roast</h2>-->
+                        <div class="form-group">
+                        <label for="roast-selection" class="labels">Roast</label>
+                        <select class="input-group mb-3" id="roast-selection">
+                            <option value="all">All</option>
+                            <option value = "light">Light</option>
+                            <option value = "medium">Medium</option>
+                            <option value = "dark">Dark</option>
+                        </select>
+                            <label class="labels">Coffee Name</label>
+                        <input type="text" class="input-group mb-3" id="coffee-search">
+                        <input id="submit" class="btn btn-primary btn-md btn-block" type="submit">
+                        </div>
+                    </form>
+                    <hr id="hr-main">
+
+                    <form class="mt-5">
+
+                    <h2 id="add-coffee-head"><u>Add Coffee</u></h2>
+
+                        <label for="roast-add" class="labels">Roast</label>
+                        <select class="input-group mb-3" id="roast-add">
+                            <option value = "light">Light</option>
+                            <option value = "medium">Medium</option>
+                            <option value = "dark">Dark</option>
+                        </select>
                         <label class="labels">Coffee Name</label>
-                    <input type="text" class="input-group mb-3" id="coffee-search">
-                    <input id="submit" class="btn btn-primary btn-md btn-block" type="submit">
-                    </div>
-                </form>
-                <hr id="hr-main">
+                        <input type="text" class="input-group mb-3"  id="name-add">
+                        <input id="user-submit" class="btn btn-primary btn-md btn-block"  type="submit" />
+                    </form>
 
-                <form class="mt-5">
-
-                <h2 id="add-coffee-head"><u>Add Coffee</u></h2>
-
-                    <label for="roast-add" class="labels">Roast</label>
-                    <select class="input-group mb-3" id="roast-add">
-                        <option value = "light">Light</option>
-                        <option value = "medium">Medium</option>
-                        <option value = "dark">Dark</option>
-                    </select>
-                    <label class="labels">Coffee Name</label>
-                    <input type="text" class="input-group mb-3"  id="name-add">
-                    <input id="user-submit" class="btn btn-primary btn-md btn-block"  type="submit" />
-                </form>
-
+                </div>
             </div>
-        </div>
 
-        <hr id="hr-main">
+            <hr id="hr-main">
 
 
-          <!-- Extra Feature: Shopping Cart  -->
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        Shopping Cart
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-headers">
-                            <div class="row">
-                                <div class="col-4">Item</div>
-                                <div class="col-4">Quantity</div>
-                                <div class="col-4">Price</div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="card-footer text-right">
-                        <button type="submit" class="btn btn-primary text-right" value="checkout" id="checkout">Checkout  <i class="fas fa-shopping-cart"></i></button>
-                        Total: <span id="total-price"></span>
+              <!-- Extra Feature: Shopping Cart  -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Shopping Cart
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item list-headers">
+                                <div class="row">
+                                    <img class="card-img-bottom" src="img/Under_construction_image.jpg" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="card-footer text-right">
+                            <button type="submit" class="btn btn-primary text-right" value="checkout" id="checkout">Checkout  <i class="fas fa-shopping-cart"></i></button>
+                            Total: <span id="total-price"></span>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
 
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
 </html>
-
-
-<!--<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>-->
