@@ -1,3 +1,26 @@
+body {
+    background-image: url("img/abstract-antique-background-172276.jpg");
+    background-size: cover;
+}
+
+.container {
+    background-color: #ffffff;
+}
+
+.main-title {
+    font-family: 'Sigmar One', sans-serif;
+    font-size: 80px;
+}
+
+form h2 {
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.btn {
+    background-image: url("img/abstract-antique-background-172276.jpg");
+    background-size: cover;
+}
+
 .coffee-list li {
     list-style: none;
     display: inline-block;
@@ -9,7 +32,13 @@
     display: inline-block;
 }
 
+.coffee-card h3 {
+    font-family: 'Titan One', sans-serif;
+    font-size: 24px;
+}
+
 .coffee-card p {
     color: #A9A4A4;
+    font-family: 'Encode Sans Condensed', sans-serif;
 }
 
