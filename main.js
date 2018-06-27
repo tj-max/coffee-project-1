@@ -56,7 +56,7 @@ function addCoffee(e) {
         id: coffees.length + 1,
         name: nameAdd.value,
         roast: roastAdd.value
-    }
+    };
 
     coffees.push(newCoffee);
     divCoffee.innerHTML = renderCoffees(coffees);
@@ -66,20 +66,20 @@ function addCoffee(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', price: 3.50, roast: 'light'},
+    {id: 2, name: 'Half City', price: 3.50, roast: 'light'},
+    {id: 3, name: 'Cinnamon', price: 3.50, roast: 'light'},
+    {id: 4, name: 'City', price: 3.75, roast: 'medium'},
+    {id: 5, name: 'American', price: 3.75, roast: 'medium'},
+    {id: 6, name: 'Breakfast', price: 3.75, roast: 'medium'},
+    {id: 7, name: 'High', price: 4.25, roast: 'dark'},
+    {id: 8, name: 'Continental', price: 4.25, roast: 'dark'},
+    {id: 9, name: 'New Orleans', price: 4.25, roast: 'dark'},
+    {id: 10, name: 'European', price: 4.25, roast: 'dark'},
+    {id: 11, name: 'Espresso', price: 4.25, roast: 'dark'},
+    {id: 12, name: 'Viennese', price: 4.25, roast: 'dark'},
+    {id: 13, name: 'Italian', price: 4.25, roast: 'dark'},
+    {id: 14, name: 'French', price: 4.25, roast: 'dark'},
 ];
 
 var divCoffee = document.querySelector('#coffees');
@@ -98,3 +98,12 @@ roastSelection.addEventListener('change', updateCoffees);
 coffeeSearch.addEventListener('input', updateCoffees);
 
 userSubmit.addEventListener('click', addCoffee);
+
+
+
+/** ================= Extracurricular features ==================== **/
+
+var currentTotal = document.querySelector('#total-price');
+
+currentTotal.innerHTML = '$0.00';
+

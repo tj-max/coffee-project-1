@@ -13,13 +13,18 @@ body {
     font-size: 80px;
 }
 
-form h2 {
+form h2,
+.labels {
     font-family: 'Encode Sans Condensed', sans-serif;
 }
 
 .btn {
     background-image: url("img/abstract-antique-background-172276.jpg");
     background-size: cover;
+}
+#checkout {
+    background-image: none;
+    background-color: blue !important;
 }
 
 .coffee-list li {
@@ -55,3 +60,6 @@ border: 0;
     padding-top: 0px;
 }
 
+.card-footer {
+    font-weight: 700;
+}
