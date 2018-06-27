@@ -1,5 +1,6 @@
 "use strict";
 
+// Populates HTML Div element with coffee array
 function renderCoffee(coffee) {
     var html = '<li class="my-3"><div class= "col coffee-card px-0 mx-5 mb-0 mt-0"><h3>' + coffee.name + '</h3>';
     html += '<p class="pl-1">' + coffee.roast + '</p></div></li>';
@@ -16,6 +17,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// Simple string comparison function
 function stringComp(str1, str2) {
     str1 = str1.toLowerCase();
     str2 = str2.toLowerCase();
@@ -29,6 +31,9 @@ function stringComp(str1, str2) {
     }
 }
 
+// Iterates though coffees array & compares each coffee
+// object with User inputs, then displays results
+// in real time
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -50,6 +55,9 @@ function updateCoffees(e) {
     divCoffee.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
+// Adds new coffee to coffees[] array, then
+// displays new list of coffees
 function addCoffee(e) {
     e.preventDefault();
     var newCoffee = {
@@ -66,42 +74,46 @@ function addCoffee(e) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', price: 3.50, roast: 'light'},
-    {id: 2, name: 'Half City', price: 3.50, roast: 'light'},
-    {id: 3, name: 'Cinnamon', price: 3.50, roast: 'light'},
-    {id: 4, name: 'City', price: 3.75, roast: 'medium'},
-    {id: 5, name: 'American', price: 3.75, roast: 'medium'},
-    {id: 6, name: 'Breakfast', price: 3.75, roast: 'medium'},
-    {id: 7, name: 'High', price: 4.25, roast: 'dark'},
-    {id: 8, name: 'Continental', price: 4.25, roast: 'dark'},
-    {id: 9, name: 'New Orleans', price: 4.25, roast: 'dark'},
-    {id: 10, name: 'European', price: 4.25, roast: 'dark'},
-    {id: 11, name: 'Espresso', price: 4.25, roast: 'dark'},
-    {id: 12, name: 'Viennese', price: 4.25, roast: 'dark'},
-    {id: 13, name: 'Italian', price: 4.25, roast: 'dark'},
-    {id: 14, name: 'French', price: 4.25, roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 2, name: 'Half City', roast: 'light'},
+    {id: 3, name: 'Cinnamon', roast: 'light'},
+    {id: 4, name: 'City', roast: 'medium'},
+    {id: 5, name: 'American', roast: 'medium'},
+    {id: 6, name: 'Breakfast', roast: 'medium'},
+    {id: 7, name: 'High', roast: 'dark'},
+    {id: 8, name: 'Continental', roast: 'dark'},
+    {id: 9, name: 'New Orleans', roast: 'dark'},
+    {id: 10, name: 'European', roast: 'dark'},
+    {id: 11, name: 'Espresso', roast: 'dark'},
+    {id: 12, name: 'Viennese', roast: 'dark'},
+    {id: 13, name: 'Italian', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// Gets HTML elements related to coffee search/updating
 var divCoffee = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#coffee-search');
 
+// Gets HTML elements related to adding new coffee
 var roastAdd = document.querySelector('#roast-add');
 var nameAdd = document.querySelector('#name-add');
 var userSubmit = document.querySelector('#user-submit');
 
+// Displays initial coffee list
 divCoffee.innerHTML = renderCoffees(coffees);
 
+
+// Event Listeners
 console.log(submitButton.addEventListener('click', updateCoffees));
 roastSelection.addEventListener('change', updateCoffees);
 coffeeSearch.addEventListener('input', updateCoffees);
-
 userSubmit.addEventListener('click', addCoffee);
 
 
 
-/** ================= Extracurricular features ==================== **/
+/** ================= Extra features ==================== **/
 
 var currentTotal = document.querySelector('#total-price');
 
