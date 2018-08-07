@@ -48,14 +48,14 @@ form h2,
     font-family: 'Encode Sans Condensed', sans-serif;
 }
 
-#hr-main {
+.hr-main {
 height: 12px;
 border: 0;
     box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
 
 }
 
-#add-coffee-head {
+.add-coffee-head {
     margin-bottom: 20px;
     padding-top: 0px;
 }
